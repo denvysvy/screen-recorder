@@ -7,12 +7,14 @@ import sys
 
 def setup_logger():
     logger.remove()
-    logger.add(
-        sys.stdout,
-        level="DEBUG",
-        format="[<level>{level}</level>] <green>{time:HH:mm:ss}</green> >  (<yellow>{extra[log_type]}</yellow>):  {message}",
-        colorize=True
-    )
+
+    if sys.stdout:
+        logger.add(
+            sys.stdout,
+            level="DEBUG",
+            format="[<level>{level}</level>] <green>{time:HH:mm:ss}</green> >  (<yellow>{extra[log_type]}</yellow>):  {message}",
+            colorize=True
+        )
     logger.add(
         "app.log",
         level="DEBUG",
@@ -20,7 +22,7 @@ def setup_logger():
         rotation="10 MB",
         retention="1 days",
     )
-    logger.bind(log_type="general")
+
     return logger
 
 setup_logger()
