@@ -1,40 +1,40 @@
-# 🎥 Screen Recorder (Python)
+# Screen Recorder (Python)
 
 A multi-threaded screen recording application for Windows built with Python. The project uses a WebView-based UI and supports screen capture, audio recording, and post-processing with FFmpeg.
 
 ---
 
-## 🚀 Features
+## Features
 
--   📺 Screen recording (full screen or selected area)
+-   Screen recording (full screen or selected area)
     
--   🖱️ Area selection using a built-in selector tool
+-   Area selection using a built-in selector tool
     
--   🎧 Microphone recording (optional)
+-   Microphone recording (optional)
     
--   🔊 System audio recording (optional)
+-   System audio recording (optional)
     
--   ⚡ Multi-threaded architecture:
+-   Multi-threaded architecture:
     
     -   Screen capture thread (takes screenshots)
     -   Frame processing/writing thread
     -   Logging thread (frame drops, timing, performance)
     -   Microphone recording thread
     -   System audio recording thread
--   🧠 Performance logging (FPS, dropped frames, timing)
+-   Performance logging (FPS, dropped frames, timing)
     
--   🌐 Web-based UI using WebView
+-   Web-based UI using WebView
     
--   💾 Save recordings to a selected directory
+-   Save recordings to a selected directory
     
--   🎬 FFmpeg integration for:
+-   FFmpeg integration for:
     
     -   Combining audio & video
     -   Converting to desired formats
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 -   `main.py` → used for debugging and development
     
@@ -53,12 +53,12 @@ A multi-threaded screen recording application for Windows built with Python. The
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+  pip install -r requirements.txt
 ```
 
 Main libraries used:
@@ -86,7 +86,7 @@ For biulding exe:
 -   pyinstaller
 ---
 
-## ⚙️ FFmpeg
+## FFmpeg
 
 This project requires **FFmpeg** for video processing.
 
@@ -95,33 +95,33 @@ It is used for:
 -   merging audio and video
 -   encoding output files
 
-👉 You must install FFmpeg and add it to your system PATH: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+You must install FFmpeg and add it to your system PATH: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
 
-👉 And make sure you have right path to `ffmpeg.exe` same as `ffmpeg\bin\ffmpeg.exe`
+And make sure you have right path to `ffmpeg.exe` same as `ffmpeg\bin\ffmpeg.exe`
 
 ---
 
-## 🖥️ Usage
+## Usage
 
 Run in development mode:
 
 ```bash
-python main.py
+  python main.py
 ```
 
 ---
 
-## 📦 Build (EXE)
+## Build (EXE)
 
 To build the executable version:
 
 ```bash
-python build.py
+  python build.py
 ```
 
 ---
 
-## 📁 Output
+## Output
 
 After recording:
 
@@ -130,7 +130,7 @@ After recording:
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 The recorder uses multiple threads:
 
@@ -142,19 +142,19 @@ The recorder uses multiple threads:
 
 ---
 
-## 📸 UI
+## UI
 
 The interface is built using HTML/CSS/JS and rendered via WebView.
 
 ---
 
-## 📜 License
+## License
 
 MIT License
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 -   Performance depends on your hardware
 -   High FPS recording may increase CPU usage
@@ -162,7 +162,7 @@ MIT License
 
 ---
 
-## 💡 Future Improvements
+## Future Improvements
 
 -   GPU acceleration
 -   Better audio sync

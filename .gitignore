@@ -14,7 +14,7 @@ __pycache__/
 *.log
 app.log
 
-
+MIT License.txt
 build/
 dist/
 *.spec
